@@ -1,0 +1,19 @@
+---
+- name: Deploy Hardened Blockchain Node (CGNAT Bypass)
+  hosts: blockchain_nodes
+  become: yes
+  vars:
+    data_dir: "/mnt/warehouse/ethereum"
+    geth_cache: 8192
+
+  tasks:
+    - name: Fetch Tailscale IP
+      shell: tailscale ip -4
+      register: tailscale_ip
+      changed_when: false
+
+    - name: Template Geth Systemd Service
+      template:
+        src: templates/geth.service.j2
+        dest: /etc/systemd/system/geth.service
+      notify: Restart Geth

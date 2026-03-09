@@ -1,0 +1,12 @@
+[Unit]
+Description=Geth Execution Client (CGNAT Bypass Mode)
+After=network.target tailscaled.service
+
+[Service]
+ExecStart=/usr/bin/geth \
+  --datadir {{ data_dir }} \
+  --discovery.v5 \
+  --nat extip:{{ tailscale_ip.stdout }} \
+  --port 30303 \
+  --maxpeers 50 \
+  --cache {{ geth_cache }}
