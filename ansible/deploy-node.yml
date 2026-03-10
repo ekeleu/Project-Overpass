@@ -1,19 +1,33 @@
 ---
-- name: Deploy Hardened Blockchain Node (CGNAT Bypass)
+- name: Deploy Hardened Blockchain Node (v2.1)
   hosts: blockchain_nodes
   become: yes
   vars:
     data_dir: "/mnt/warehouse/ethereum"
-    geth_cache: 8192
 
   tasks:
-    - name: Fetch Tailscale IP
+    - name: Fetch Tailscale IP for ExtIP Mapping
       shell: tailscale ip -4
       register: tailscale_ip
       changed_when: false
 
-    - name: Template Geth Systemd Service
+    - name: Deploy Optimized Systemd Service
       template:
         src: templates/geth.service.j2
         dest: /etc/systemd/system/geth.service
       notify: Restart Geth
+
+    - name: Verify P2P Connectivity
+      shell: "geth --datadir {{ data_dir }} attach --exec 'net.peerCount'"
+      register: peer_check
+      until: peer_check.stdout|int > 10
+      retries: 5
+      delay: 10
+      ignore_errors: yes
+
+  handlers:
+    - name: Restart Geth
+      systemd:
+        name: geth
+        state: restarted
+        daemon_reload: yes
