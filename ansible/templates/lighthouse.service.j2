@@ -1,0 +1,26 @@
+[Unit]
+Description=Lighthouse Beacon Node (Project Overpass)
+After=network.target tailscaled.service
+
+[Service]
+User={{ ansible_user }}
+Group={{ ansible_user }}
+Type=simple
+ExecStart=/usr/local/bin/lighthouse beacon_node \
+  --datadir {{ lighthouse_data_dir }} \
+  --network mainnet \
+  --execution-endpoint http://localhost:8551 \
+  --execution-jwt {{ data_dir }}/jwt.hex \
+  --checkpoint-sync-url https://mainnet.checkpoint-sync.ethpandaops.io \
+  --enr-address {{ tailscale_ip.stdout }} \
+  --enr-udp-port 9000 \
+  --enr-tcp-port 9000 \
+  --discovery-port 9000 \
+  --http \
+  --http-address 0.0.0.0
+
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
