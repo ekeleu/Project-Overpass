@@ -1,12 +1,27 @@
 [Unit]
-Description=Geth Execution Client (CGNAT Bypass Mode)
+Description=Geth Execution Client (Project Overpass)
 After=network.target tailscaled.service
 
 [Service]
+Type=simple
+User={{ ansible_user }}
+Group={{ ansible_user }}
 ExecStart=/usr/bin/geth \
   --datadir {{ data_dir }} \
+  --authrpc.addr localhost \
+  --authrpc.port 8551 \
+  --authrpc.vhosts localhost \
+  --authrpc.jwtsecret {{ data_dir }}/jwt.hex \
+  --http \
+  --http.api eth,net,engine,admin \
   --discovery.v5 \
-  --nat extip:{{ tailscale_ip.stdout }} \
   --port 30303 \
+  --nat extip:{{ tailscale_ip.stdout }} \
   --maxpeers 50 \
-  --cache {{ geth_cache }}
+  --cache 8192
+
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
