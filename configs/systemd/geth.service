@@ -1,0 +1,20 @@
+[Unit]
+Description=Geth Ethereum Daemon
+After=network.target
+
+[Service]
+Type=simple
+User=nodeadmin
+ExecStart=/usr/bin/geth \
+  --datadir /mnt/warehouse/ethereum \
+  --authrpc.addr localhost \
+  --authrpc.port 8551 \
+  --authrpc.vhosts localhost \
+  --authrpc.jwtsecret /mnt/warehouse/ethereum/jwt.hex \
+  --http \
+  --http.api eth,net,engine,admin \
+  --discovery.v5 \
+  --port 30303 \
+  --nat extip:100.125.225.70 \
+  --maxpeers 50 \
+  --cache 8192

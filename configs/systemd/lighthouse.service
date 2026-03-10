@@ -1,0 +1,33 @@
+sudo tee /etc/systemd/system/lighthouse.service > /dev/null <<EOF
+[Unit]
+Description=Lighthouse Beacon Node (Project Overpass)
+After=network.target geth.service tailscaled.service
+
+[Service]
+User=nodeadmin
+Group=nodeadmin
+Type=simple
+ExecStart=/usr/local/bin/lighthouse bn \\
+  --network mainnet \\
+  --datadir /mnt/warehouse/lighthouse \\
+  --execution-endpoint http://localhost:8551 \\
+  --execution-jwt /mnt/warehouse/ethereum/jwt.hex \\
+  --checkpoint-sync-url https://mainnet.checkpoint-sync.ethpandaops.io \\
+  --http \\
+  --enr-address 100.125.225.70 \\
+  --enr-udp-port 9001 \\
+  --enr-tcp-port 9001 \\
+  --discovery-port 9001 \\
+  --port 9001 \\
+  --listen-address 0.0.0.0 \\
+  --target-peers 80
+
+Restart=always
+RestartSec=15
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+sudo systemctl daemon-reload
+sudo systemctl start lighthouse
