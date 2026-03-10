@@ -33,3 +33,10 @@ if [ "$LH_PEERS" -lt 5 ]; then
     echo "[!] Consensus peers low ($LH_PEERS). Cycling Lighthouse..."
     sudo systemctl restart lighthouse
 fi
+
+# Consensus Layer Auto-Recovery
+LH_PEERS=$(curl -s http://localhost:5052/eth/v1/node/peers | grep -c "connected" || echo "0")
+if [ "$LH_PEERS" -lt 5 ]; then
+    echo "[!] Consensus peers low ($LH_PEERS). Cycling Lighthouse..."
+    sudo systemctl restart lighthouse
+fi
