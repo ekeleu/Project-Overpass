@@ -18,3 +18,7 @@
 ### 🚀 Status: Sync Resumed
 - **Network Layer:** Successfully bypassed CGNAT via internal bootnodes.
 - **Peers:** Stable at 2+ (Execution Layer).
+### 🔄 Protocol Swap: ETH to BTC
+- **Date:** 2026-03-10
+- **Reason:** Persistent UDP/P2P throttling on Three UK mobile broadband.
+- **Action:** Re-deploying BTC Core via Tor to ensure consistent peer connectivity.
