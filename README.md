@@ -15,3 +15,6 @@
 - **Lighthouse Peers:** 50+ (via Port 9001/UDP bypass)
 - **Status:** State Healing (Execution) / Synced (Consensus)
 ### 🛠️ Fix: Removed deprecated --discovery-quick-query
+### 🚀 Status: Sync Resumed
+- **Network Layer:** Successfully bypassed CGNAT via internal bootnodes.
+- **Peers:** Stable at 2+ (Execution Layer).
