@@ -26,3 +26,10 @@ EOT
 sudo systemctl daemon-reload && sudo systemctl restart geth
 echo "Bypass Active. Monitoring peers..."
 watch -n 5 "geth --datadir /mnt/warehouse/ethereum attach --exec 'net.peerCount'"
+
+# Consensus Layer Auto-Recovery
+LH_PEERS=$(curl -s http://localhost:5052/eth/v1/node/peers | grep -c "connected" || echo "0")
+if [ "$LH_PEERS" -lt 5 ]; then
+    echo "[!] Consensus peers low ($LH_PEERS). Cycling Lighthouse..."
+    sudo systemctl restart lighthouse
+fi
