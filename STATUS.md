@@ -43,3 +43,8 @@
 - **Peers:** 9 (Outbound).
 - **NAT Type:** CGNAT (Three UK).
 - **Status:** Port 8333 closed for inbound, but IBD unhindered by outbound connections.
+
+## 🏁 Future Roadmap
+- **BTC:** Transition to Tor Onion once IBD hits 100% for LND support.
+- **ETH:** Deploy VPS Sentry with Static IPv4 to bridge DiscV5/UDP traffic.
+- **Reasoning:** Tor latency is acceptable for 10-min BTC blocks, but too slow for 12-sec ETH slots.
