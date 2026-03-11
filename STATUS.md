@@ -77,3 +77,7 @@
 - **BTC:** Transition to Tor Onion once IBD hits 100% for LND support.
 - **ETH:** Deploy VPS Sentry with Static IPv4 to bridge DiscV5/UDP traffic.
 - **Reasoning:** Tor latency is acceptable for 10-min BTC blocks, but too slow for 12-sec ETH slots.
+### 🛡️ Privacy & NAT Traversal
+- **Tor Service:** Installed and configured for ControlPort 9051.
+- **Bitcoin Config:** Prepared for .onion address generation.
+- **Benefit:** Bypasses CGNAT for inbound LND/BTC traffic.
