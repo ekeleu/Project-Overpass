@@ -115,3 +115,4 @@
 ### ⚙️ Performance Tuning
 - **Issue:** RPC Timeouts during IBD/txindexing.
 - **Fix:** Increased rpcworkqueue and rpcthreads; slowed Grafana scrape rate to 60s.
+- **Config Update:** Increased RPC threads and workqueue for stability.
