@@ -116,3 +116,6 @@
 - **Issue:** RPC Timeouts during IBD/txindexing.
 - **Fix:** Increased rpcworkqueue and rpcthreads; slowed Grafana scrape rate to 60s.
 - **Config Update:** Increased RPC threads and workqueue for stability.
+## 🏆 Milestone: 22% Reached
+- **Current Block:** 518,525 (April 2018 era).
+- **Status:** IBD is accelerating; hardware handling SegWit data well.
