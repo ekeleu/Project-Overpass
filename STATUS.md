@@ -92,3 +92,6 @@
 - **Onion Address:** ykxsc3wzg3qpbz5wj47wprbphtojsvhy7c66r4rvjm33s4egppbe2wad.onion
 - **Status:** Authentication successful via SAFECOOKIE.
 - **NAT Bypass:** Confirmed. Node is now reachable despite CGNAT.
+### ✅ Connectivity Verified
+- **Tor Score:** 4 (Confirmed reachable).
+- **Inbound Traffic:** Ready for LND / Electrum / Mobile Wallet pairing.
