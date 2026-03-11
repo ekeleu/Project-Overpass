@@ -48,3 +48,7 @@
 - **BTC:** Transition to Tor Onion once IBD hits 100% for LND support.
 - **ETH:** Deploy VPS Sentry with Static IPv4 to bridge DiscV5/UDP traffic.
 - **Reasoning:** Tor latency is acceptable for 10-min BTC blocks, but too slow for 12-sec ETH slots.
+### 🔍 Validation Phase
+- **Observation:** Progress percentage reflects transaction density, not block count.
+- **Status:** Re-validating 2015 era data on 32GB RAM system.
+- **Goal:** Maintain uptime to cross the 2017 SegWit weight barrier.
