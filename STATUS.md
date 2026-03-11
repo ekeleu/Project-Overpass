@@ -81,3 +81,7 @@
 - **Tor Service:** Installed and configured for ControlPort 9051.
 - **Bitcoin Config:** Prepared for .onion address generation.
 - **Benefit:** Bypasses CGNAT for inbound LND/BTC traffic.
+### 🌐 Bitcoin Config: Tor Hybrid Mode
+- **Network:** IPv4 Outbound + Tor Hidden Service (Inbound).
+- **Services:** RPC active, dbcache 8000, txindex enabled.
+- **NAT Bypass:** Verified via Tor Control Port 9051.
