@@ -95,3 +95,6 @@
 ### ✅ Connectivity Verified
 - **Tor Score:** 4 (Confirmed reachable).
 - **Inbound Traffic:** Ready for LND / Electrum / Mobile Wallet pairing.
+### 📱 Remote Access
+- **Method:** Tor Onion V3 QR Code generated.
+- **Integration:** Ready for Sparrow/Zeus wallet pairing.
