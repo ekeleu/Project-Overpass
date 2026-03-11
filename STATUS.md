@@ -123,3 +123,7 @@
 - **CPU Temp:** 44°C (Package id 0)
 - **Storage Temp:** 32°C (NVMe Composite)
 - **Fan Speed:** ~2000 RPM (Stable cooling)
+### ⚠️ Sync Regression Incident
+- **Issue:** Loss of sync state after unmount; node performing full re-scan/index.
+- **Root Cause:** Likely txindex rebuild or dirty chainstate flush.
+- **Mitigation:** Strict 'bitcoin-cli stop' protocol before any hardware changes.
