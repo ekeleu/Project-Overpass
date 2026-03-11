@@ -85,3 +85,6 @@
 - **Network:** IPv4 Outbound + Tor Hidden Service (Inbound).
 - **Services:** RPC active, dbcache 8000, txindex enabled.
 - **NAT Bypass:** Verified via Tor Control Port 9051.
+### 🌐 Networking: IPv6 Active / Tor Pending
+- **IPv6:** Successfully discovered multiple local addresses.
+- **Tor Status:** Pending handshake on Port 9051.
