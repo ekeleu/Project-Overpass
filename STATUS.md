@@ -107,3 +107,8 @@
 ### 🖥️ Local Infrastructure
 - **Node Local IP:** 192.168.0.146
 - **Dashboard Access:** http://192.168.0.146:3000
+
+## 📡 Management Endpoints
+- **Grafana (Tailscale):** http://100.125.225.70:3000
+- **Grafana (Local):** http://192.168.0.146:3000
+- **SSH Access:** nodeadmin@100.125.225.70
