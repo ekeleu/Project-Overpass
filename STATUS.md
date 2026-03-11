@@ -127,3 +127,6 @@
 - **Issue:** Loss of sync state after unmount; node performing full re-scan/index.
 - **Root Cause:** Likely txindex rebuild or dirty chainstate flush.
 - **Mitigation:** Strict 'bitcoin-cli stop' protocol before any hardware changes.
+### 🚀 Performance: Turbo Mode
+- **Action:** Increased dbcache to 12288 (12GB) to mitigate re-index time.
+- **Strategy:** Prioritizing Bitcoin validation while ETH is dormant.
