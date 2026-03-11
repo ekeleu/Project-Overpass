@@ -23,3 +23,7 @@
 - **Block Height:** 367,148
 - **Rate:** ~15 blocks/sec
 - **Memory:** Cache growing steadily; 8GB headroom available.
+### 🔍 Local Data Verification
+- **Network Usage:** 0 bps (Confirmed local validation).
+- **Validation Source:** 1TB SSD (/mnt/blockchain-vault).
+- **System Performance:** 32GB RAM utilized for chainstate reconstruction.
