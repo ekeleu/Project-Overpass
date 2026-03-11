@@ -130,3 +130,6 @@
 ### 🚀 Performance: Turbo Mode
 - **Action:** Increased dbcache to 12288 (12GB) to mitigate re-index time.
 - **Strategy:** Prioritizing Bitcoin validation while ETH is dormant.
+### 🔭 Infrastructure Strategy
+- **Concept:** Implementing Prometheus/Grafana as a 'Single Pane of Glass'.
+- **Goal:** Move from reactive terminal checks to proactive dashboard monitoring post-IBD.
