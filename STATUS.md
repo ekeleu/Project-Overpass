@@ -88,3 +88,7 @@
 ### 🌐 Networking: IPv6 Active / Tor Pending
 - **IPv6:** Successfully discovered multiple local addresses.
 - **Tor Status:** Pending handshake on Port 9051.
+### 🧅 Tor Hidden Service Active
+- **Onion Address:** ykxsc3wzg3qpbz5wj47wprbphtojsvhy7c66r4rvjm33s4egppbe2wad.onion
+- **Status:** Authentication successful via SAFECOOKIE.
+- **NAT Bypass:** Confirmed. Node is now reachable despite CGNAT.
