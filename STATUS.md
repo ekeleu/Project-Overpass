@@ -5,3 +5,6 @@
 ### 📦 Hardware Sync: BTC SSD Restored
 - **Status:** 1TB SSD re-mounted to /mnt/warehouse.
 - **Action:** Permission fix applied; bitcoind service restarted.
+### 🗺️ Hardware Mapping
+- **NVMe (1.9T):** /mnt/warehouse (ETH Data - Suspended)
+- **SSD (1TB):** /mnt/blockchain-vault (BTC Data - Active)
