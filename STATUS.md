@@ -112,3 +112,6 @@
 - **Grafana (Tailscale):** http://100.125.225.70:3000
 - **Grafana (Local):** http://192.168.0.146:3000
 - **SSH Access:** nodeadmin@100.125.225.70
+### ⚙️ Performance Tuning
+- **Issue:** RPC Timeouts during IBD/txindexing.
+- **Fix:** Increased rpcworkqueue and rpcthreads; slowed Grafana scrape rate to 60s.
