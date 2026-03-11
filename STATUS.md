@@ -68,3 +68,7 @@
 - **Current Verification:** 6.79%
 - **Mode:** Local I/O (No bandwidth consumed).
 - **Infrastructure:** 32GB RAM handling UTXO cache efficiently.
+### 🌐 Networking Audit
+- **Peers:** 9 (Outbound).
+- **NAT Type:** CGNAT (Three UK).
+- **Status:** Port 8333 closed for inbound, but IBD unhindered by outbound connections.
