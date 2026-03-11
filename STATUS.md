@@ -16,3 +16,6 @@
 - **Current Era:** April 2015
 - **BPM:** High (Processing small legacy blocks).
 - **Optimization:** Increasing dbcache to 8000 for IBD acceleration.
+### 🚀 Hardware Optimization Applied
+- **Action:** Increased dbcache to 8000MiB.
+- **Status:** Transitioned from June 2015 data; IBD speed significantly improved.
