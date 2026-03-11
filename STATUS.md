@@ -104,3 +104,6 @@
 - **Network:** Tor Onion V3 Active & Reachable (Score 4).
 - **Storage:** 1TB SSD mounted successfully at /mnt/blockchain-vault.
 - **Next Goal:** Monitor IBD until 100% and then link mobile wallet.
+### 🖥️ Local Infrastructure
+- **Node Local IP:** 192.168.0.146
+- **Dashboard Access:** http://192.168.0.146:3000
