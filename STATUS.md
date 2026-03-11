@@ -8,3 +8,7 @@
 ### 🗺️ Hardware Mapping
 - **NVMe (1.9T):** /mnt/warehouse (ETH Data - Suspended)
 - **SSD (1TB):** /mnt/blockchain-vault (BTC Data - Active)
+### 📈 BTC Sync Status
+- **Current Block:** 343,473
+- **Network Headers:** 940,242
+- **Storage:** Successfully verified on /mnt/blockchain-vault.
