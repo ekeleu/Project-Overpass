@@ -12,3 +12,7 @@
 - **Current Block:** 343,473
 - **Network Headers:** 940,242
 - **Storage:** Successfully verified on /mnt/blockchain-vault.
+### 🏎️ Sync Performance
+- **Current Era:** April 2015
+- **BPM:** High (Processing small legacy blocks).
+- **Optimization:** Increasing dbcache to 8000 for IBD acceleration.
