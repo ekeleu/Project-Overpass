@@ -151,3 +151,6 @@
 - **Final Block:** 940,498
 - **Network State:** Fully Synced / Hidden Service Active.
 - **Transition:** Ethereum infrastructure migrated to Bitcoin Core.
+### 🔄 Field Operations: Re-mount Protocol
+- **Scenario:** SSD Hot-swapping on same host.
+- **Workflow:** mount -> verify -> bitcoind -daemon.
