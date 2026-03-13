@@ -154,3 +154,7 @@
 ### 🔄 Field Operations: Re-mount Protocol
 - **Scenario:** SSD Hot-swapping on same host.
 - **Workflow:** mount -> verify -> bitcoind -daemon.
+## 📖 CHAPTER CLOSED: Project Overpass
+- BTC Node: 100% Operational.
+- Archive Date: Fri 13 Mar 09:23:45 GMT 2026
+- Transition: Handing over to 'Ethereum Resurrection' session.
