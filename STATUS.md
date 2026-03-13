@@ -147,3 +147,7 @@
 - **Current Date in Ledger:** June 2024
 - **Total Transactions Verified:** 1.02 Billion
 - **Hardware Performance:** Cache and Thermals holding steady.
+## ✅ Project Overpass: BTC Node Live
+- **Final Block:** 940,498
+- **Network State:** Fully Synced / Hidden Service Active.
+- **Transition:** Ethereum infrastructure migrated to Bitcoin Core.
