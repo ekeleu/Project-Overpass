@@ -1,2 +1,12 @@
 nodeadmin@blockchain-node:~/monitoring/.env
 nodeadmin@blockchain-node:~/monitoring/.env
+# Ignore sensitive blockchain tokens and keys
+*.token
+*.net
+*.key
+*.dat
+wallets/
+
+# Ignore large log files
+*.log
+sync_log.txt
