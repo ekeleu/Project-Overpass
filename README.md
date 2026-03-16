@@ -22,3 +22,6 @@
 - **Date:** 2026-03-10
 - **Reason:** Persistent UDP/P2P throttling on Three UK mobile broadband.
 - **Action:** Re-deploying BTC Core via Tor to ensure consistent peer connectivity.
+### Security Hardening: Snap Confinement
+
+### When running Bitcoin Core via Snap on external mounts (/mnt), the application is sandboxed. To allow access to the data directory, the removable-media interface must be manually connected:
