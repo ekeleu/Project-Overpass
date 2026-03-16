@@ -1,0 +1,15 @@
+[Unit]
+Description=Algorand Node (Project Overpass)
+After=network.target
+
+[Service]
+User=nodeadmin
+Group=nodeadmin
+WorkingDirectory=/mnt/warehouse/algorand-node/data
+Environment=ALGORAND_DATA=/mnt/warehouse/algorand-node/data
+ExecStart=/usr/bin/algod -d /mnt/warehouse/algorand-node/data
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

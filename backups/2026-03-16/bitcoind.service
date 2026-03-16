@@ -1,0 +1,15 @@
+[Unit]
+Description=Bitcoin Core Daemon
+After=network.target
+
+[Service]
+User=nodeadmin
+Group=nodeadmin
+Type=simple
+# Ensure we point to the absolute path of the binary
+ExecStart=/usr/local/bin/bitcoind -datadir=/mnt/blockchain-vault/bitcoin -conf=/mnt/blockchain-vault/bitcoin/bitcoin.conf -nosettings -dbcache=2048
+Restart=always
+RestartSec=15
+
+[Install]
+WantedBy=multi-user.target
