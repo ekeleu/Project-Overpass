@@ -1,0 +1,42 @@
+[Unit]
+Description=Geth Execution Client (Project Overpass)
+After=network.target
+Wants=network.target
+
+[Service]
+User=nodeadmin
+Group=nodeadmin
+Type=simple
+Restart=always
+RestartSec=5
+TimeoutStopSec=600
+# High performance nodes need higher file limits
+LimitNOFILE=65536
+
+# This clears the stale lock file before every start attempt
+ExecStartPre=/usr/bin/rm -f /mnt/warehouse/ethereum/geth/LOCK
+
+ExecStart=/usr/bin/geth \
+  --datadir /mnt/warehouse/ethereum \
+  --authrpc.jwtsecret /home/nodeadmin/jwt.hex \
+  --authrpc.addr 127.0.0.1 \
+  --authrpc.port 8551 \
+  --authrpc.vhosts localhost \
+  --http \
+  --http.addr 0.0.0.0 \
+  --http.port 8545 \
+  --http.api eth,net,web3,engine,admin \
+  --http.vhosts="*" \
+  --http.corsdomain "*" \
+  --ws \
+  --ws.addr 127.0.0.1 \
+  --ws.port 8546 \
+  --ws.api eth,net,web3 \
+  --port 30303 \
+  --maxpeers 100 \
+  --cache 8192 \
+  --state.scheme path \
+  --metrics \
+  --discovery.dns enrtree://AKA3AM6LPBYEUDMVNU3BSVQJ5AD45Y7YPOHJLEF6W26QOE4VTUDPE@all.mainnet.ethdisco.net
+[Install]
+WantedBy=multi-user.target

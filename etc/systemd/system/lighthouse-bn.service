@@ -1,0 +1,19 @@
+[Unit]
+Description=Lighthouse Beacon Node
+After=network.target geth.service
+
+[Service]
+User=nodeadmin
+Group=nodeadmin
+Type=simple
+Restart=always
+RestartSec=5
+ExecStart=/usr/local/bin/lighthouse bn \
+  --network mainnet \
+  --execution-endpoint http://127.0.0.1:8551 \
+  --execution-jwt /home/nodeadmin/jwt.hex \
+  --http \
+  --checkpoint-sync-url https://mainnet.checkpoint-sync.ethpandaops.io
+
+[Install]
+WantedBy=default.target
