@@ -25,3 +25,7 @@
 ### Security Hardening: Snap Confinement
 
 ### When running Bitcoin Core via Snap on external mounts (/mnt), the application is sandboxed. To allow access to the data directory, the removable-media interface must be manually connected:
+## Hardware Architecture
+## Component	Chain	Storage Type	Path
+## Primary NVMe	Ethereum / Algorand	High-IOPS Internal	/mnt/warehouse
+## External SSD	Bitcoin Core	High-Capacity SATA	/mnt/bitcoin-vault
